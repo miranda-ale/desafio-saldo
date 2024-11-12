@@ -8,6 +8,13 @@ public class Desafio {
         double valorDeposito;
         double valorTransferencia;
         int opcoesMenu = 0;
+        String menu = """
+                    Escolha uma opcao:
+                    1- Consultar saldo
+                    2- Receber valor
+                    3- Transferir valor
+                    4- Sair
+                    Digite a opcao desejada:""";
 
         Scanner scanner = new Scanner(System.in);
 
@@ -20,13 +27,7 @@ public class Desafio {
         //Menu
 
         while (opcoesMenu != 4) {
-            System.out.println("""
-                    Escolha uma opcao:
-                    1- Consultar saldo
-                    2- Receber valor
-                    3- Transferir valor
-                    4- Sair
-                    Digite a opcao desejada:""");
+            System.out.println(menu);
             opcoesMenu = scanner.nextInt();
 
             switch (opcoesMenu) {
@@ -55,6 +56,7 @@ public class Desafio {
 
                 case 4:
                     System.out.println("Ate logo!");
+                    break;
 
                 default:
                     System.out.println("Opcao invalida!\n");
